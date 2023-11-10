@@ -7,14 +7,168 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.Resources>
+
+            <!--crer un style-->
+            <Style x:Key="Style_OP"  TargetType="{x:Type Control}">
+
+
+                <Setter Property="Background" Value="Transparent"/>
+
+                <Setter Property="FontSize" Value="42"/>
+
+                <Setter Property="TextBlock.TextAlignment" Value="Center" />
+
+                <Setter Property="Foreground" Value="White"/>
+
+
+
+                <Style.Resources>
+
+                    <Style TargetType="Border">
+
+                        <Setter Property="CornerRadius" Value="35" />
+
+                    </Style>
+
+                </Style.Resources>
+
+            </Style>
+
+            <!-- creer un style-->
+            <Style x:Key="Style_OP1"  TargetType="{x:Type Control}">
+
+
+                <Setter Property="Background" Value="Transparent"/>
+
+                <Setter Property="FontSize" Value="42"/>
+
+                <Setter Property="TextBlock.TextAlignment" Value="Center" />
+
+                <Setter Property="Foreground" Value="#FFE62525"/>
+
+
+
+                <Style.Resources>
+
+                    <Style TargetType="Border">
+
+                        <Setter Property="CornerRadius" Value="35" />
+
+                    </Style>
+
+                </Style.Resources>
+
+            </Style>
+        </Grid.Resources>
         <Grid.Background>
+            <!--image de fond-->
             <ImageBrush ImageSource="/ilia-bronskiy-3Z-Lhjmtdn8-unsplash.jpg"/>
         </Grid.Background>
+
+        <!--on fait 3 colone-->
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.50*"/>
+            <RowDefinition Height="2*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
+
+        <!--afficher le nom du jeu dan la premiere colone -->
+        <Grid x:Name="chose7" Grid.Row="0" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="400"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid x:Name="chose11" Grid.Column="1" >
+                <TextBox  Name="TB_affichage1" Text="jeux pendue " FontSize="50" Style="{StaticResource Style_OP1}" IsReadOnly="True" ></TextBox>
+            </Grid>
+            <Grid x:Name="chose10" Grid.Column="0" >
+                <Button  Name="mode" Content="mode" Click="mode_Click"  Style="{StaticResource Style_OP1}"  />
+            </Grid>
+            <Grid x:Name="tele" Grid.Column="2" >
+                <TextBox  Name="temps" Text="" FontSize="50" Style="{StaticResource Style_OP1}" IsReadOnly="True"></TextBox>
+            </Grid>
+
+        </Grid>
+
+        <!--faire les separation pour le pensu les bouton et laffichage des lettre -->
+        <Grid Name="chose" Grid.Row="1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid x:Name="image" Grid.Column="0" >
+                <Image x:Name="Img_Pendu" Width="300" Source="/image/1.png" />
+            </Grid>
+            <Grid x:Name="chose4" Grid.Column="1" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid x:Name="chose6" Grid.Row="1" >
+                    <TextBox  Name="TB_affichage" Text="" FontSize="50" Style="{StaticResource Style_OP1}" IsReadOnly="True"></TextBox>
+                </Grid>
+                <Grid x:Name="chose5" Grid.Row="0" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Row ="0" Grid.Column="0" Name="START" Content="START" Click="START_Click"  Style="{StaticResource Style_OP1}"  />
+                    <Button Grid.Row ="0" Grid.Column="1" Name="RESTART" Content="RESTART" Click="RESTRAT_Click"  Style="{StaticResource Style_OP1}" />
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <!--faire tout les separation pour les lettre-->
+        <Grid x:Name="chose2" Grid.Row="2" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Button Grid.Row ="0" Grid.Column="0" Name="A" Content="A" Click="BTN_Click" Style="{StaticResource Style_OP}" />
+            <Button Grid.Row ="0" Grid.Column="1" Name="B" Content="B" Click="BTN_Click" Style="{StaticResource Style_OP}" />
+            <Button Grid.Row ="0" Grid.Column="2" Name="C" Content="C" Click="BTN_Click" Style="{StaticResource Style_OP}" />
+            <Button Grid.Row ="0" Grid.Column="3" Name="D" Content="D" Click="BTN_Click" Style="{StaticResource Style_OP}" />
+            <Button Grid.Row ="0" Grid.Column="4" Name="E" Content="E" Click="BTN_Click" Style="{StaticResource Style_OP}" />
+            <Button Grid.Row ="0" Grid.Column="5" Name="F" Content="F" Click="BTN_Click" Style="{StaticResource Style_OP}" />
+            <Button Grid.Row ="0" Grid.Column="6" Name="G" Content="G" Click="BTN_Click" Style="{StaticResource Style_OP}" />
+            <Button Grid.Row ="0" Grid.Column="7" Name="H" Content="H" Click="BTN_Click" Style="{StaticResource Style_OP}" />
+            <Button Grid.Row ="0" Grid.Column="8" Name="I" Content="I" Click="BTN_Click" Style="{StaticResource Style_OP}" />
+            <Button Grid.Row ="0" Grid.Column="9" Name="J" Content="J" Click="BTN_Click" Style="{StaticResource Style_OP}" />
+            <Button Grid.Row ="0" Grid.Column="10" Name="K" Content="K" Click="BTN_Click" Style="{StaticResource Style_OP}" />
+            <Button Grid.Row ="0" Grid.Column="11" Name="L" Content="L" Click="BTN_Click" Style="{StaticResource Style_OP}" />
+            <Button Grid.Row ="0" Grid.Column="12" Name="M" Content="M" Click="BTN_Click" Style="{StaticResource Style_OP}" />
+            <Button Grid.Row ="1" Grid.Column="0" Name="N" Content="N" Click="BTN_Click" Style="{StaticResource Style_OP}" />
+            <Button Grid.Row ="1" Grid.Column="1" Name="O" Content="O" Click="BTN_Click" Style="{StaticResource Style_OP}" />
+            <Button Grid.Row ="1" Grid.Column="2" Name="P" Content="P" Click="BTN_Click" Style="{StaticResource Style_OP}" />
+            <Button Grid.Row ="1" Grid.Column="3" Name="Q" Content="Q" Click="BTN_Click" Style="{StaticResource Style_OP}" />
+            <Button Grid.Row ="1" Grid.Column="4" Name="R" Content="R" Click="BTN_Click" Style="{StaticResource Style_OP}" />
+            <Button Grid.Row ="1" Grid.Column="5" Name="S" Content="S" Click="BTN_Click" Style="{StaticResource Style_OP}" />
+            <Button Grid.Row ="1" Grid.Column="6" Name="T" Content="T" Click="BTN_Click" Style="{StaticResource Style_OP}" />
+            <Button Grid.Row ="1" Grid.Column="7" Name="U" Content="U" Click="BTN_Click" Style="{StaticResource Style_OP}" />
+            <Button Grid.Row ="1" Grid.Column="8" Name="V" Content="V" Click="BTN_Click" Style="{StaticResource Style_OP}" />
+            <Button Grid.Row ="1" Grid.Column="9" Name="W" Content="W" Click="BTN_Click" Style="{StaticResource Style_OP}" />
+            <Button Grid.Row ="1" Grid.Column="10" Name="X" Content="X" Click="BTN_Click" Style="{StaticResource Style_OP}" />
+            <Button Grid.Row ="1" Grid.Column="11" Name="Y" Content="Y" Click="BTN_Click" Style="{StaticResource Style_OP}" />
+            <Button Grid.Row ="1" Grid.Column="12" Name="Z" Content="Z" Click="BTN_Click" Style="{StaticResource Style_OP}" />
+        </Grid>
+
     </Grid>
 </Window>

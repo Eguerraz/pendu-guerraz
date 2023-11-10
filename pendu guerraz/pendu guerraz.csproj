@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="system.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -96,6 +97,19 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ilia-bronskiy-3Z-Lhjmtdn8-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\1.png" />
+    <Resource Include="image\2.png" />
+    <Resource Include="image\3.png" />
+    <Resource Include="image\4.png" />
+    <Resource Include="image\5.png" />
+    <Resource Include="image\6.png" />
+    <Resource Include="image\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\tele0.png" />
+    <Resource Include="image\tele1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
